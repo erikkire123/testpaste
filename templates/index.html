@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Pastebin-like Site</title>
+</head>
+<body>
+   <h1>Pastebin-like Site</h1>
+   <form action="/add_paste" method="post">
+       <textarea name="content" rows="10" cols="40"></textarea><br>
+       <input type="submit" value="Submit">
+   </form>
+   <hr>
+   <h2>Pastes</h2>
+   <ul>
+       {% for paste in pastes %}
+           <li>{{ paste[0] }}</li>
+       {% endfor %}
+   </ul>
+</body>
+</html>
